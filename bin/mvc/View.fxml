@@ -60,14 +60,11 @@
             <Separator layoutX="175.0" layoutY="10.0" orientation="VERTICAL" styleClass="boldSeparator" prefHeight="200.0" GridPane.columnIndex="6" GridPane.rowSpan="9" />
             <Separator layoutX="175.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" GridPane.rowSpan="9" />
             <Separator layoutX="398.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="8" GridPane.rowSpan="9" />
-            <!-- 
-            <TextField fx:id="textField" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-			-->
-			
-			<ChoiceBox fx:id="cb00" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
-				<items>
-        			<FXCollections fx:factory="observableArrayList">
-          				<String fx:value="    " />
+           
+
+			<fx:define>
+				<FXCollections fx:id="choiceBoxItems" fx:factory="observableArrayList">
+						<String fx:value="    " />
           				<String fx:value="   1" />
           				<String fx:value="   2" />
           				<String fx:value="   3" />
@@ -77,12 +74,16 @@
           				<String fx:value="   7" />
           				<String fx:value="   8" />
           				<String fx:value="   9" />
-        			</FXCollections>
-      			</items>
+				</FXCollections>
+			</fx:define>
+			
+			
+			<ChoiceBox fx:id="cb00" items="${choiceBoxItems}" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
       			<value>
         			<String fx:value="" />
     			</value>
 			</ChoiceBox>
+
 			
 			<ChoiceBox fx:id="cb10" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
 				<items>

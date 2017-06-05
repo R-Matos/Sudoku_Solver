@@ -1,5 +1,9 @@
 package mvc;
 
+import java.util.stream.IntStream;
+
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -10,8 +14,13 @@ import logic.Board;
 
 public class Controller {
 
+	//https://stackoverflow.com/questions/44354198/javafx-reusable-collections-using-fxml
+	
+	//private ListProperty<String> choiceBoxItems = new SimpleListProperty(FXCollections.observableArrayList("", "1", "2"));
+	 
+	
 	@FXML
-	private GridPane gridPane;
+	public GridPane gridPane;
 	
 	@FXML
 	private TextField textField;
@@ -43,9 +52,23 @@ public class Controller {
 	
 	public Controller(Model model) {
 		this.model = model;
+		
+		//IntStream.range(1,1).mapToObj(i -> Integer.toString(i)).forEach(choiceBoxItems::add);
+		
+		
 	}
 	
-	
+/*	public ListProperty<String> choiceBoxItemsProperty() {
+        return choiceBoxItems ;
+    }
+
+    public ObservableList<String> getChoiceBoxItems() {
+        return choiceBoxItemsProperty().get() ;
+    }
+
+    public void setComboBoxItems(ObservableList<String> choiceBoxItems) {
+        choiceBoxItemsProperty().set(choiceBoxItems) ;
+    }*/
 	
 	
 	
@@ -53,21 +76,22 @@ public class Controller {
 	public void onSolve() {
 		
 		getInputData();
-		
+	
 		int[][] inputData = {
-				{ cb00Int, cb01Int, cb02Int, cb03Int, cb04Int, cb05Int, cb06Int, cb07Int, cb08Int },
-				{ cb10Int, cb11Int, cb12Int, cb13Int, cb14Int, cb15Int, cb16Int, cb17Int, cb18Int },
-				{ cb20Int, cb21Int, cb22Int, cb23Int, cb24Int, cb25Int, cb26Int, cb27Int, cb28Int },
-				{ cb30Int, cb31Int, cb32Int, cb33Int, cb34Int, cb35Int, cb36Int, cb37Int, cb38Int },
-				{ cb40Int, cb41Int, cb42Int, cb43Int, cb44Int, cb45Int, cb46Int, cb47Int, cb48Int },
-				{ cb50Int, cb51Int, cb52Int, cb53Int, cb54Int, cb55Int, cb56Int, cb57Int, cb58Int },	
-				{ cb60Int, cb61Int, cb62Int, cb63Int, cb64Int, cb65Int, cb66Int, cb67Int, cb68Int },
-				{ cb70Int, cb71Int, cb72Int, cb73Int, cb74Int, cb75Int, cb76Int, cb77Int, cb78Int },
-				{ cb80Int, cb81Int, cb82Int, cb83Int, cb84Int, cb85Int, cb86Int, cb87Int, cb88Int } };
+				{ cb00Int, cb10Int, cb20Int, cb30Int, cb40Int, cb50Int, cb60Int, cb70Int, cb80Int },
+				{ cb01Int, cb11Int, cb21Int, cb31Int, cb41Int, cb51Int, cb61Int, cb71Int, cb81Int },
+				{ cb02Int, cb12Int, cb22Int, cb32Int, cb42Int, cb52Int, cb62Int, cb72Int, cb82Int },
+				{ cb03Int, cb13Int, cb23Int, cb33Int, cb43Int, cb53Int, cb63Int, cb73Int, cb83Int },
+				{ cb04Int, cb14Int, cb24Int, cb34Int, cb44Int, cb54Int, cb64Int, cb74Int, cb84Int },
+				{ cb05Int, cb15Int, cb25Int, cb35Int, cb45Int, cb55Int, cb65Int, cb75Int, cb85Int },
+				{ cb06Int, cb16Int, cb26Int, cb36Int, cb46Int, cb56Int, cb66Int, cb76Int, cb86Int },
+				{ cb07Int, cb17Int, cb27Int, cb37Int, cb47Int, cb57Int, cb67Int, cb77Int, cb87Int },
+				{ cb08Int, cb18Int, cb28Int, cb38Int, cb48Int, cb58Int, cb68Int, cb78Int, cb88Int } };
+		
 		
 		Board board = new Board(inputData);
 		
-		model.solve(board);
+		model.solve(board, this);
 	}
 	
 	

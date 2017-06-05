@@ -6,11 +6,15 @@ import org.junit.runners.Suite.SuiteClasses;
 
 import junit.QuadrantIsPresent;
 import junit.QuadrantIsUnique;
+import junit.ColumnIsPresent;
+import junit.ColumnIsUnique;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
 	QuadrantIsPresent.class,
-	QuadrantIsUnique.class
+	QuadrantIsUnique.class,
+	ColumnIsPresent.class,
+	ColumnIsUnique.class
 	
 	})
 
