@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.collections.FXCollections ?>
+<?scenebuilder-stylesheet application.css?>
+
+<!--  <fx:include fx:id="someId" source="NestedFXML.fxml"/> -->
+
+<BorderPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="mvc.Controller">
+   
+   <bottom>
+      <Button fx:id="solveBtn" onAction="#onSolve" mnemonicParsing="false" text="Solve" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </bottom>
+   
+   <center>
+      <GridPane fx:id="gridPane" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        
+         <children>
+            
+            <Separator prefWidth="200.0" GridPane.columnSpan="9" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="65.0" prefWidth="200.0" GridPane.columnSpan="9" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="121.0" prefWidth="200.0" styleClass="boldSeparator" GridPane.columnSpan="9" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="177.0" prefWidth="200.0" GridPane.columnSpan="9" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="233.0" prefWidth="200.0" GridPane.columnSpan="9" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="288.0" prefWidth="200.0" styleClass="boldSeparator" GridPane.columnSpan="9" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="344.0" prefWidth="200.0" GridPane.columnSpan="9" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+            <Separator layoutX="10.0" layoutY="399.0" prefWidth="200.0" GridPane.columnSpan="9" GridPane.rowIndex="7" GridPane.rowSpan="2" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.rowSpan="9" />
+            <Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowSpan="9" />
+            <Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowSpan="9" />
+            <Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL" styleClass="boldSeparator" prefHeight="200.0" GridPane.columnIndex="3" GridPane.rowSpan="9" />
+            <Separator layoutX="175.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="4" GridPane.rowSpan="9" />
+            <Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.rowSpan="9" />
+            <Separator layoutX="175.0" layoutY="10.0" orientation="VERTICAL" styleClass="boldSeparator" prefHeight="200.0" GridPane.columnIndex="6" GridPane.rowSpan="9" />
+            <Separator layoutX="175.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" GridPane.rowSpan="9" />
+            <Separator layoutX="398.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="8" GridPane.rowSpan="9" />
+            <!-- 
+            <TextField fx:id="textField" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+			-->
+			
+			<ChoiceBox fx:id="cb00" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb10" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb20" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb30" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb40" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb50" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb60" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb70" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb80" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb01" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb11" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb21" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb31" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb41" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb51" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb61" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb71" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb81" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb02" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb12" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb22" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb32" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb42" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+ 						<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb52" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb62" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb72" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb82" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb03" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb13" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb23" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb33" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			
+			<ChoiceBox fx:id="cb43" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			
+			<ChoiceBox fx:id="cb53" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			
+			<ChoiceBox fx:id="cb63" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			
+			<ChoiceBox fx:id="cb73" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb83" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			<ChoiceBox fx:id="cb04" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb14" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb24" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb34" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+         
+         	<ChoiceBox fx:id="cb44" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb54" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb64" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb74" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb84" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb05" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb15" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb25" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			<ChoiceBox fx:id="cb35" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb45" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb55" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb65" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			<ChoiceBox fx:id="cb75" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb85" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			
+			<ChoiceBox fx:id="cb06" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+						<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb16" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb26" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb36" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb46" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb56" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb66" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb76" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb86" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb07" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb17" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb27" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb37" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb47" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb57" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb67" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb77" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb87" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb08" prefWidth="150.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb18" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb28" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb38" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb48" prefWidth="150.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb58" prefWidth="150.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb68" prefWidth="150.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb78" prefWidth="150.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="" />
+    			</value>
+			</ChoiceBox>
+			
+			<ChoiceBox fx:id="cb88" prefWidth="150.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+				<items>
+        			<FXCollections fx:factory="observableArrayList">
+          				<String fx:value="    " />
+          				<String fx:value="   1" />
+          				<String fx:value="   2" />
+          				<String fx:value="   3" />
+          				<String fx:value="   4" />
+          				<String fx:value="   5" />
+          				<String fx:value="   6" />
+          				<String fx:value="   7" />
+          				<String fx:value="   8" />
+          				<String fx:value="   9" />
+        			</FXCollections>
+      			</items>
+      			<value>
+        			<String fx:value="    " />
+    			</value>
+			</ChoiceBox>
+			
+			
+			
+         
+         
+         
+        
+         
+         
+         </children>
+      </GridPane>
+   </center>
+   
+</BorderPane>
