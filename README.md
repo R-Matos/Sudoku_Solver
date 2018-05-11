@@ -1,1 +1,1 @@
-A sudoku solver.
+A sudoku solver. Incomplete.
